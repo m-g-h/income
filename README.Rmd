@@ -1,5 +1,6 @@
 ---
 output: github_document
+always_allow_html: yes
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
@@ -23,3 +24,26 @@ You can install this package with:
 ``` r
 devtools::install_github("m-g-h/income")
 ```
+# Example
+
+This package is implemented via the package `drake` and should only be used inside an R-Project. After setting one up, do the following:
+
+## 1 "Make" the drake plan:
+```{r message=FALSE, warning=FALSE}
+income::make_project()
+```
+
+You can take a look at the drake-plan with:
+```{r fig.height=3, fig.width=7, message=TRUE, warning=TRUE}
+income::show_project()
+```
+*(it's quite simple)*
+
+## 2 Plot the income distributions:
+```{r fig.height=3, fig.width=7}
+income::plot_lorenz(ctry = "FR")
+```
+
+A list of the country id's can be shown with the function `country_list()`
+
+
