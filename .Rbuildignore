@@ -1,2 +1,4 @@
 ^income\.Rproj$
 ^\.Rproj\.user$
+^\.drake$
+^\build.R
